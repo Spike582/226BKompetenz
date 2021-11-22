@@ -11,12 +11,5 @@ namespace _226BKomp.HZ1_K2
         public int builddate;
 
         public Door door { get; set; }
-
-
-        //falls man den Konstruktor von door ausführen möchte (Notiz für mich)
-        /*public House()
-        {
-            door = new Door();
-        }*/
     }
 }
