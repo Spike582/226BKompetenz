@@ -8,9 +8,9 @@ namespace _226BKomp.HZ3_K1
 {
     class Säugetier
     {
-        public  string name;
+        public  string name { get; set; }
 
-        public int age;
+        public int age { get; set; }
 
         public static void Atmen()
         {

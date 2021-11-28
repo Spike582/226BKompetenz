@@ -8,16 +8,16 @@ namespace _226BKomp.HZ3_K1
 {
     class Hund: Säugetier
     {
-        private string fellFarbe;
+        private string fellFarbe { get; set; }
 
-        private string rasse;
+        private string rasse { get; set; }
 
         public void Bellen()
         {
             //Bellen
         }
 
-        public Hund(string Name = "", int Age = "", string FellFarbe = "", string Rasse):base()
+        public Hund(string Name = "", int Age = 0, string FellFarbe = "", string Rasse = ""):base()
         {
             name = Name;
             age = Age;

@@ -8,9 +8,9 @@ namespace _226BKomp.HZ3_K1
 {
     class Mensch: Säugetier
     {
-        private string beruf;
+        private string beruf { get; set; }
 
-        private bool verheiratet;
+        private bool verheiratet { get; set; }
 
         public void Arbeiten()
         {
