@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _226BKomp.HZ3_K2
 {
-    abstract class Saeugetier
+    abstract class Mammal
     {
         public string Name { get; set; }
 
