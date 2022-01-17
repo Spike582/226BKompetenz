@@ -6,10 +6,6 @@ namespace _226BKomp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Person person = new Person();
-            Car car = new Car();
-            Dirt dirt = new Dirt();
 
         }
 
@@ -45,79 +41,36 @@ namespace _226BKomp
             }
         }
         //HZ1 K4
-        //In this example you can just call the delete Object function and it will "remove" the correct object, this means it will remove the one where it gets called in.
+        //Keine Switch artige strucktur und dies mit Vererbung umgehen überklasse mit einer abstrakten Funktion und diese in jeder sub klasse überschreiben.
 
-        public class baseClass
+        public abstract class Automobile
         {
-            private string Class;
-            //These 3 Methodes are there to remove there specific Objekt with things in it witch just that object has (in a real scenaria now theres nothing written in them)
-            public void die()
-            {
-                //Is used to "remove" the person Object  
-            }
-            public void destroy()
-            {
-                //Is used to "remove" the car Object  
-            }
-            public void remove()
-            {
-                //Is used to "remove" the dirt Object  
-            }
-            public void deleteObjekt()
-            {
-                switch (Class)
-                {
-                    case "Person":
-                        Console.WriteLine("The Deleted Class is: Person");
-                        //this Metode will do specific code only to destroy a Person object.
-                        die();
-                        break;
 
-                    case "Car":
-                        Console.WriteLine($"The Deleted Class is: Car");
-                        //this Metode will do specific code only to destroy a Car object.
-                        destroy();
-                        break;
-                        
-                    case "Dirt":
-                        Console.WriteLine($"The Deleted Class is: Dirt");
-                        //this Metode will do specific code only to destroy a Dirt object.
-                        remove();
-                        break;
-
-                    default:
-                        Console.WriteLine($"this class has not been implemented yet: {Class}.");
-                        break;
-                }
-            }
-            public baseClass()
+            public virtual void changeTires()
             {
-                this.Class = this.GetType().Name;
+                Console.WriteLine("Tires changed");
+            }
+            
+        }
+
+        public class Mercedes: Automobile
+        {
+            public override void changeTires()
+            {
+                //specific code for changing a Mercedes Tire
+                Console.WriteLine("Tires of a mercedes changed");
             }
         }
 
-        public class Person: baseClass
+        public class Mazda: Automobile
         {
-            public Person()
+            public override void changeTires()
             {
-                deleteObjekt();
+                //specific code for changing a Mazda Tire
+                Console.WriteLine("Tires of a matda changed");
             }
         }
 
-        public class Car: baseClass
-        {
-            public Car()
-            {
-                deleteObjekt();
-            }
-        }
 
-        public class Dirt: baseClass
-        {
-            public Dirt()
-            {
-                deleteObjekt();
-            }
-        }
     }
 }
