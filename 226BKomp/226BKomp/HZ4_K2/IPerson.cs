@@ -8,10 +8,8 @@ namespace _226BKomp.HZ4_K2
 {
     interface IPerson
     {
-        public string Name { get; set; }
-
-        public int Age { get; set; }
-
         public bool IsHungry();
+
+        public bool Lives();
     }
 }

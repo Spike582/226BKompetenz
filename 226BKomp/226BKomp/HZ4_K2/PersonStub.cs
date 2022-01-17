@@ -8,19 +8,14 @@ namespace _226BKomp.HZ4_K2
 {
     class PersonStub: IPerson
     {
-        public string Name { get; set; }
-
-        public int Age { get; set; }
-
         public bool IsHungry() {
 
             return false;
         }
 
-        public PersonStub()
+        public bool Lives()
         {
-            Name = "Peter";
-            Age = 20;
+            return true;
         }
     }
 }
