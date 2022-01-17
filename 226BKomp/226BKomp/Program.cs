@@ -41,7 +41,7 @@ namespace _226BKomp
             }
         }
         //HZ1 K4
-        //Keine Switch artige strucktur und dies mit Vererbung umgehen überklasse mit einer abstrakten Funktion und diese in jeder sub klasse überschreiben.
+        //Keine Switch artige strucktur und dies mit Vererbung umgehen überklasse mit einer "virtuellen" Funktion und die Switch artige strucktur zu umgehen.
 
         public abstract class Automobile
         {
